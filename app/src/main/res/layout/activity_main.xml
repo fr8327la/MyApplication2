@@ -6,13 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <FrameLayout
+        android:id="@+id/coloredField3"
+        android:layout_width="530dp"
+        android:layout_height="932dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/coloredField1"
+        android:layout_width="464dp"
+        android:layout_height="159dp"
+        android:background="#e4eee4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/coloredField2"
+        android:layout_width="477dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="80dp"
+        android:background="#e4eee4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accelerometerInfo"
+        app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/originalInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="No data"
+        android:textColor="#808080"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="191dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="60dp"
+        android:onClick="disable"
+        android:text="Accelerometer"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:backgroundTint="#90b990"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coloredField1" />
+
+    <Button
+        android:id="@+id/activateButton"
+        android:layout_width="159dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="200dp"
+        android:onClick="handleText"
+        android:text="Activate"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:backgroundTint="#90b990"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/coloredField2" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activateButton" />
+
+    <TextView
+        android:id="@+id/helloSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Sensor!"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/coloredField1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/accelerometerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="position"
+        android:textColor="#808080"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="131dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activateButton"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/externalImageView"
+        android:layout_width="74dp"
+        android:layout_height="54dp"
+        android:src="@drawable/tiltpicture"
+        android:tint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
