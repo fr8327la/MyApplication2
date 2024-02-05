@@ -58,13 +58,13 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="191dp"
-        android:layout_height="62dp"
+        android:layout_width="245dp"
+        android:layout_height="74dp"
         android:layout_marginTop="60dp"
         android:onClick="disable"
         android:text="Start accelerometer"
         android:textColor="#FFFFFF"
-        android:textSize="15dp"
+        android:textSize="20dp"
         app:backgroundTint="#90b990"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
