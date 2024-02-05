@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     accelerometerInfo.setVisibility(View.GONE);
                     originalInfo.setVisibility(View.VISIBLE);
                     startButton.setBackgroundColor(Color.parseColor("#90b990"));
-                    startButton.setText("Accelerometer");
+                    startButton.setText("Start accelerometer");
                 } else {
                     startAccelerometer();
                     shouldShowAccelerometerInfo = true;
@@ -155,7 +155,12 @@ public class MainActivity extends AppCompatActivity {
                     float y = event.values[1];
                     float z = event.values[2];
 
-                    String info = "X: " + x + "\nY: " + y + "\nZ: " + z;
+                    // Format the values with two decimals
+                    String formattedX = String.format("%.2f", x);
+                    String formattedY = String.format("%.2f", y);
+                    String formattedZ = String.format("%.2f", z);
+
+                    String info = "X: " + formattedX + "\nY: " + formattedY + "\nZ: " + formattedZ;
                     accelerometerInfo.setText("Accelerometer Data:\n" + info);
                     if (shouldShowAccelerometerInfo) {
                         accelerometerInfo.setVisibility(View.VISIBLE); // Show the accelerometer information
